@@ -108,7 +108,7 @@ class GridXmlToArrayConverter
         $query = XmlToArray::getChildByName($source, 'query');
         if ($query) {
             $bindParameters = XmlToArray::getChildByName($source, 'bindParameters');
-            // todo: unfinished business. Needs more thought and will be built out last.
+            // TODO: unfinished business. Needs more thought and will be built out last.
             $queryConfig = ['query' => [], 'bindParams' => ($bindParameters ?? [])];
         }
         return $queryConfig ?? [];

@@ -7,6 +7,8 @@
 ?>
 <select id="<?= $field->getName() ?>" form="<?= $field->getFormName() ?>">
     <?php foreach ($field->getOptions() as $option): ?>
-    <option value="<?= $escaper->escapeHtmlAttr($option->getValue()) ?>"><?= $escaper->escapeHtml($option->getLabel()) ?></option>
+    <option value="<?= $escaper->escapeHtmlAttr($option->getValue()) ?>" <?=
+    $option->getValue() === $field->getValue() ? 'selected' : ''
+    ?>><?= $escaper->escapeHtml($option->getLabel()) ?></option>
     <?php endforeach; ?>
 </select>
